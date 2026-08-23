@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "pubtabnet",
+      "artifact": "pubtabnet.tar.gz",
+      "url": "https://huggingface.co/datasets/ajimeno/PubTabNet/resolve/06963b1af16203f4633c718e2c50109eb57ed658/pubtabnet.tar.gz?download=true",
+      "expected_bytes": 11244059914,
+      "sha256": "90c55e733c85c98edf6d350b77f1e4c23767577555fc932e44ad723674de8d3e",
+      "license": "CDLA-Sharing-1.0",
+      "upstream": "https://github.com/ibm-aur-nlp/PubTabNet",
+      "purpose": "table images paired with HTML structure and cell text"
+    },
+    {
+      "id": "chartqa",
+      "artifact": "chartqa.zip",
+      "url": "https://huggingface.co/datasets/ahmed-masry/ChartQA/resolve/af8b6f5c08c95085271561c2a3f9d15f2b5a9031/ChartQA%20Dataset.zip?download=true",
+      "expected_bytes": 875370872,
+      "sha256": "1bf310e5a51101681495c4a24f4f29d22c4f70b52df24e2e4feb0d79cae3c160",
+      "license": "GPL-3.0",
+      "upstream": "https://github.com/vis-nlp/ChartQA",
+      "purpose": "chart images with source tables, element annotations, and QA"
+    },
+    {
+      "id": "ai2d",
+      "artifact": "ai2d-all.zip",
+      "url": "https://ai2-website.s3.amazonaws.com/data/ai2d-all.zip",
+      "expected_bytes": 990965374,
+      "sha256": null,
+      "license": "AI2D research-only license (non-commercial; no redistribution)",
+      "upstream": "https://prior.allenai.org/projects/diagram-understanding",
+      "purpose": "diagram images with text, object, relationship, and QA annotations"
+    },
+    {
+      "id": "docci_images",
+      "artifact": "docci_images.tar.gz",
+      "url": "https://storage.googleapis.com/docci/data/docci_images.tar.gz",
+      "expected_bytes": 7592938768,
+      "sha256": null,
+      "license": "CC-BY-4.0",
+      "upstream": "https://google.github.io/docci/",
+      "purpose": "ordinary real-world images for captioning replay"
+    },
+    {
+      "id": "docci_annotations",
+      "artifact": "docci_descriptions.jsonlines",
+      "url": "https://storage.googleapis.com/docci/data/docci_descriptions.jsonlines",
+      "expected_bytes": 11000214,
+      "sha256": null,
+      "license": "CC-BY-4.0",
+      "upstream": "https://google.github.io/docci/",
+      "purpose": "human-written descriptions and official data splits"
+    }
+  ]
+}

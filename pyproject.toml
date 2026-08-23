@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-image-parser"
+version = "0.1.0"
+description = "A tiny, local image-to-RAG-text parser with Markdown table output."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "onnxruntime>=1.20",
+    "Pillow>=10.4",
+    "psutil>=6.1",
+    "PyMuPDF>=1.26,<2",
+    "safetensors>=0.4.5",
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+    "transformers>=5.0,<6",
+]
+
+[project.optional-dependencies]
+train = [
+    "accelerate>=1.2",
+    "peft>=0.18",
+]
+export = [
+    "onnx>=1.17",
+]
+dev = [
+    "pytest>=8.3",
+    "reportlab>=4.2",
+    "ruff>=0.9",
+]
+
+[project.scripts]
+rag-image-parse = "rag_image_parser.cli:main"
+rag-image-train = "rag_image_parser.training:main"
+rag-image-build-dataset = "rag_image_parser.data_builder:main"
+rag-image-merge-adapter = "rag_image_parser.merge_adapter:main"
+rag-image-export-onnx = "rag_image_parser.export_onnx:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
